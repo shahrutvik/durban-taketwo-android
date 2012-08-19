@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="addmember">Add Member</string>
+    <string name="app_name">Let\'s Carpool</string>
+    <string name="label_firstname">First Name:</string>
+    <string name="label_lastname">Last Name:</string>
+    <string name="label_phonenumber">Phone Number:</string>
+    <string name="btnlabel_addMember">Add Member>></string>
+    <string name="btnlabel_members">Members>></string>
+
+</resources>
