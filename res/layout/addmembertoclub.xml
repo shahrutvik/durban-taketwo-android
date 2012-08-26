@@ -7,16 +7,16 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/addmember" />
+        android:text="@string/addmembertoclub" />
     
      <TextView
-        android:id="@+id/label_firstname"
+        android:id="@+id/label_clubname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/label_firstname" />
+        android:text="@string/label_clubname" />
 
     <EditText
-        android:id="@+id/editText_firstname"
+        android:id="@+id/editText_clubname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" >
@@ -24,20 +24,7 @@
         <requestFocus />
     </EditText>
     
-    <TextView
-        android:id="@+id/label_lastname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_lastname" />
-
-    <EditText
-        android:id="@+id/editText_lastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10" >
-    </EditText>
-    
-        <TextView
+         <TextView
         android:id="@+id/label_phonenumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,10 +38,10 @@
     </EditText>
 
     <Button
-        android:id="@+id/button_addMember"
+        android:id="@+id/button_addMemberToClub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnlabel_addMember"
-        android:onClick="onAddMemberButtonClicked" />
+        android:text="@string/btnlabel_addMemberToClub"
+        android:onClick="onAddMemberToClubButtonClicked" />
 
 </LinearLayout>

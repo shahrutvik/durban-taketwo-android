@@ -14,10 +14,18 @@ public class MemberActivity extends Activity {
         setContentView(R.layout.members);
     }
     
-    public void onButtonClicked(View v) {
+    public void onAddMemberButtonClicked(View v) {
     	
     	startActivity(
                 new Intent(this,AddMemberActivity.class)
+               
+        );
+    }
+    
+    public void onAddMemberToClubButtonClicked(View v) {
+    	
+    	startActivity(
+                new Intent(this,AddMemberToClubActivity.class)
                
         );
     }

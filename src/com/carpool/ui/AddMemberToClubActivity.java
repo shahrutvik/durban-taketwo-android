@@ -14,9 +14,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class AddMemberActivity extends Activity {
-	String firstName;
-	 String lastName;
+public class AddMemberToClubActivity extends Activity {
+	 String clubName;
 	 String phoneNumber;
 	 
 	 
@@ -25,15 +24,13 @@ public class AddMemberActivity extends Activity {
      @Override
      public void onCreate(Bundle savedInstanceState) {
     	 super.onCreate(savedInstanceState);
-         setContentView(R.layout.addmember);
+         setContentView(R.layout.addmembertoclub);
      }
      
-     public void onAddMemberButtonClicked(View v) {
+     public void onAddMemberToClubButtonClicked(View v) {
      	
-     	 EditText etxt_firstname = (EditText) findViewById(R.id.editText_firstname);
-         firstName = etxt_firstname.getText().toString();
-         EditText etxt_lastname = (EditText) findViewById(R.id.editText_lastname);
-         lastName = etxt_lastname.getText().toString();
+     	 EditText etxt_clubname = (EditText) findViewById(R.id.editText_clubname);
+         clubName = etxt_clubname.getText().toString();
          EditText etxt_phonenumber = (EditText) findViewById(R.id.editText_phonenumber);
          phoneNumber = etxt_phonenumber.getText().toString();
          new UIAsyncTask(this).execute();
@@ -49,9 +46,9 @@ public class AddMemberActivity extends Activity {
     		
     		private ProgressDialog dialog;
     		
-    		private AddMemberActivity addMemberActivity;
+    		private AddMemberToClubActivity addMemberToClubActivity;
     		private static final String NAMESPACE = "http://action.carpool.com/";
-    		private static final String URL = "http://10.0.2.2:8080/durban-taketwo/services/AddMemberAction?wsdl";	
+    		private static final String URL = "http://10.0.2.2:8080/durban-taketwo/services/AddMemberToClubAction?wsdl";	
     		private static final String SOAP_ACTION = "http://action.carpool.com";
     		private static final String METHOD_NAME = "add";
 
@@ -59,11 +56,11 @@ public class AddMemberActivity extends Activity {
     			
     			dialog = new ProgressDialog(activity);
     			
-    			addMemberActivity = (AddMemberActivity) activity;
+    			addMemberToClubActivity = (AddMemberToClubActivity) activity;
     		}
     		
     		protected void onPreExecute() {
-    	        dialog.setMessage("Adding Member...");
+    	        dialog.setMessage("Adding Member To Club...");
     	        dialog.show();
     	    }
 
@@ -73,9 +70,8 @@ public class AddMemberActivity extends Activity {
     		SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
     	    	
     			
-    	    	request.addProperty("firstName", addMemberActivity.firstName);
-    	    	request.addProperty("lastName", addMemberActivity.lastName);
-    	    	request.addProperty("phoneNumber", addMemberActivity.phoneNumber);
+    	    	request.addProperty("clubName", addMemberToClubActivity.clubName);
+    	    	request.addProperty("phoneNumber", addMemberToClubActivity.phoneNumber);
     			SoapSerializationEnvelope envelope = 
     				new SoapSerializationEnvelope(SoapEnvelope.VER11); 
 
@@ -102,7 +98,7 @@ public class AddMemberActivity extends Activity {
     	            dialog.dismiss();
     	        }
     			
-    		    showAddMemberStatusDialog(v);
+    		    showAddMemberToClubStatusDialog(v);
     			
     			
     	    }
@@ -112,35 +108,35 @@ public class AddMemberActivity extends Activity {
      
      
      
-     private void showAddMemberStatusDialog(boolean success){
+     private void showAddMemberToClubStatusDialog(boolean success){
     	 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
  				this);
   
  			// set title
- 			alertDialogBuilder.setTitle("Add Member Status");
+ 			alertDialogBuilder.setTitle("Add Member To Club Status");
             if(success==true){
  			// set dialog message
  			alertDialogBuilder
- 				.setMessage("Member added successfully!")
+ 				.setMessage("Member added to club successfully!")
  				.setCancelable(false)
  				.setPositiveButton("OK",new DialogInterface.OnClickListener() {
  					public void onClick(DialogInterface dialog,int id) {
  						// if this button is clicked, close
  						// current activity
- 						AddMemberActivity.this.finish();
+ 						AddMemberToClubActivity.this.finish();
  					}
  				  })
  				;
             }
             else{
             	alertDialogBuilder
- 				.setMessage("Adding Member Failed!")
+ 				.setMessage("Adding Member To Club Failed!")
  				.setCancelable(false)
  				.setPositiveButton("Try again?",new DialogInterface.OnClickListener() {
  					public void onClick(DialogInterface dialog,int id) {
  						// if this button is clicked, close
  						// current activity
- 						AddMemberActivity.this.recreate();
+ 						AddMemberToClubActivity.this.recreate();
  					}
  				  })
  				;

@@ -3,14 +3,20 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
-    
+   
 
     <Button
         android:id="@+id/button_members"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnlabel_members"
-        android:onClick="onButtonClicked" />
+        android:onClick="onMemberButtonClicked" />
+    
+    <Button
+        android:id="@+id/button_clubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnlabel_clubs"
+        android:onClick="onClubButtonClicked" />
 
 </LinearLayout>
