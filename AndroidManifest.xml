@@ -24,6 +24,7 @@
         <activity android:name="ClubActivity"></activity>
         <activity android:name="AddClubActivity"></activity>
         <activity android:name="AddMemberToClubActivity"></activity>
+        <activity android:name="ViewMemberClubsActivity"></activity>
     </application>
 
 </manifest>
