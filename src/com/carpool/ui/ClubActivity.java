@@ -21,5 +21,13 @@ public class ClubActivity extends Activity {
                
         );
     }
+    
+    public void onViewClubButtonClicked(View v) {
+     	
+   	 startActivity(
+                new Intent(this,ViewMemberClubsActivity.class)
+               
+        );
+    }
 
 }
