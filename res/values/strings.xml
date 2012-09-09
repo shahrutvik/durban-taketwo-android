@@ -10,9 +10,11 @@
     <string name="btnlabel_addMember">Add Member>></string>
     <string name="btnlabel_members">Members>></string>
     <string name="addmember">Add Member</string>
+    <string name="viewclubs">List Clubs</string>
     
     <string name="btnlabel_clubs">Clubs>></string>
     <string name="btnlabel_addClub">Add Club>></string>
+    <string name="btnlabel_viewClubs">View Clubs>></string>
     <string name="label_clubname">Club Name:</string>
     <string name="addclub">Add Club</string>
     

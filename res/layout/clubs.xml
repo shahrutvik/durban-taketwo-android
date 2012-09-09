@@ -12,5 +12,12 @@
         android:layout_height="wrap_content"
         android:text="@string/btnlabel_addClub"
         android:onClick="onAddClubButtonClicked" />
+    
+    <Button
+        android:id="@+id/button_viewClubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnlabel_viewClubs"
+        android:onClick="onViewClubButtonClicked" />
 
 </LinearLayout>
